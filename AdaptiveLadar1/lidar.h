@@ -44,7 +44,7 @@ typedef double Sdoub; /* Double */
 #define CH2_ADDR CH1_ADDR+0x80000
 #define CH3_ADDR CH2_ADDR+0x80000
 #define TCSPC 1
-#define CHANN 0x9999
+#define CHANN 0x0900
 
 #define  MEMORY_SZ      (Ulong)0x200000
 FILE *fl;
@@ -76,6 +76,7 @@ float delayMin;
 float delayMax;
 char fileName2[255];
 int verbose;
+float delay_last;
 
 FILE *fineData, *peakData;
 
