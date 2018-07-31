@@ -68,6 +68,7 @@ float ySteps;
 char fileName[255];
 char portNo[5];
 float macroSteps;
+float adapmacroSteps;
 float microSteps;
 float peakCheck;
 int threshold;
@@ -82,7 +83,8 @@ FILE *fineData, *peakData;
 
 void usage();
 
-float getAdaptive(float x, float y, float fnlDlymin, float fnlDlymax);
+float getAdaptive(float x, float y, float fnlDlymin, float fnlDlymax, float adapv);
+float nearScan(float x, float y, float fnlDlymin, float fnlDlymax, float adapv);
 void dlyCntMxchk(float x, float y, float dly, float * maxdly, int* maxcnt);
 float getPeak(float x, float y);
 
